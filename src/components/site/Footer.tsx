@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/excellent-future-healthcare-logo.jpg.asset.json";
+import logo from "@/assets/excellent-future-logo-2026.jpg.asset.json";
 import { CONTACT, SERVICES } from "@/lib/site-data";
 
 export function Footer() {

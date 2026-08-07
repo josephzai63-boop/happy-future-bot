@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/excellent-future-healthcare-logo.jpg.asset.json";
+import logo from "@/assets/excellent-future-logo-2026.jpg.asset.json";
 import { CONTACT } from "@/lib/site-data";
 
 const nav = [
