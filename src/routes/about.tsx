@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Excellent Future Care" },
-      { name: "description", content: "Meet the team behind Excellent Future Care — experienced professionals delivering compassionate, person-centred care across the UK." },
+      { name: "description", content: "Meet the team behind Excellent Future Care — experienced professionals delivering compassionate, person-centred care. Based in Wales, expanding to serve communities across the UK soon." },
       { property: "og:title", content: "About Excellent Future Care" },
       { property: "og:description", content: "Experienced professionals delivering compassionate, person-centred care." },
       { property: "og:url", content: "https://excellentfutureltd.com/about" },

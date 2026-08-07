@@ -13,7 +13,7 @@ export const Route = createFileRoute("/services/")({
       { title: "Our Care Services | Excellent Future Healthcare" },
       { name: "description", content: "Domiciliary, dementia, live-in, companionship and domestic support care from Excellent Future Healthcare. Palliative and respite care coming soon." },
       { property: "og:title", content: "Our Care Services | Excellent Future Healthcare" },
-      { property: "og:description", content: "Domiciliary, dementia, live-in, companionship and domestic support care across the UK." },
+      { property: "og:description", content: "Domiciliary, dementia, companionship and domestic support care. Based in Wales, expanding to serve communities across the UK soon." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://excellentfutureltd.com/services" },
     ],

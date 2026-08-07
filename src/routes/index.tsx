@@ -29,12 +29,12 @@ export const Route = createFileRoute("/")({
       { title: "Excellent Future Healthcare | Care & Staffing Services UK" },
       { name: "description", content: "Excellent Future Limited, trading as Excellent Future Healthcare, supplies temporary and permanent health and social care staff and delivers domiciliary, dementia and live-in care. Call 07412754646." },
       { property: "og:title", content: "Excellent Future Healthcare | Care & Staffing Services UK" },
-      { property: "og:description", content: "Compassionate care at home and reliable health and social care staffing across the UK. Available 24 hours." },
+      { property: "og:description", content: "Compassionate care at home and reliable health and social care staffing. Based in Wales, expanding to serve communities across the UK soon. Available 24 hours." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://excellentfutureltd.com/" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Excellent Future Healthcare | Care & Staffing Services UK" },
-      { name: "twitter:description", content: "Compassionate care at home and reliable health and social care staffing across the UK." },
+      { name: "twitter:description", content: "Compassionate care at home and reliable health and social care staffing. Based in Wales, expanding to serve communities across the UK soon." },
       { name: "robots", content: "index, follow, max-image-preview:large" },
     ],
     links: [{ rel: "canonical", href: "https://excellentfutureltd.com/" }],
@@ -87,7 +87,7 @@ const steps: { title: string; desc: string }[] = [
 const faqs: { q: string; a: string }[] = [
   {
     q: "What areas do you cover?",
-    a: "We support clients and partner organisations across the United Kingdom. Call us and we will confirm availability in your area straight away.",
+    a: "Based in Wales, expanding to serve communities across the UK soon. Call us and we will confirm availability in your area straight away.",
   },
   {
     q: "How quickly can care start?",

@@ -14,7 +14,7 @@ export function Footer() {
           </div>
           <p className="mt-1 text-xs font-medium text-purple">Trading as Excellent Future Healthcare</p>
           <p className="mt-4 text-sm text-muted-foreground">
-            Personalised home care delivered with warmth, dignity and clinical expertise across the UK.
+            Personalised home care delivered with warmth, dignity and clinical expertise. Based in Wales, expanding to serve communities across the UK soon.
           </p>
           <div className="mt-5 flex gap-3">
             <a href="#" aria-label="Facebook" className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground">
