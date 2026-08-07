@@ -3,6 +3,11 @@ import { Check, ChevronLeft, ChevronRight, Phone } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/lib/site-data";
+import hero1 from "@/assets/hero-1.jpg.asset.json";
+import hero2 from "@/assets/hero-2.jpg.asset.json";
+import hero3 from "@/assets/hero-3.jpg.asset.json";
+import hero4 from "@/assets/hero-4.jpg.asset.json";
+import hero5 from "@/assets/hero-5.jpg.asset.json";
 
 type Slide = {
   image: string;
@@ -15,9 +20,8 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    image:
-      "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=2000&q=85",
-    alt: "A diverse team of healthcare professionals working together in a hospital",
+    image: hero1.url,
+    alt: "A diverse team of nurses and healthcare assistants on a UK hospital ward",
     eyebrow: "Health and social care staffing",
     title: "We supply temporary and permanent health and social care staff for:",
     desc: "Fully vetted, DBS checked professionals, available 24 hours a day.",
@@ -30,33 +34,29 @@ const slides: Slide[] = [
     ],
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=2000&q=85",
-    alt: "A carer sharing a warm moment with an older woman during a home visit",
+    image: hero2.url,
+    alt: "An African home carer laughing with an elderly woman over tea in her living room",
     eyebrow: "Familiar faces, every visit",
     title: "Care From People Who Know You",
     desc: "Matched carers who build genuine, lasting trust in your own home.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=2000&q=85",
-    alt: "A care professional supporting an elderly client with daily personal care",
+    image: hero3.url,
+    alt: "A male carer helping an elderly Black man walk safely at home",
     eyebrow: "Personal care with dignity",
     title: "Respectful Support, Every Single Day",
     desc: "Discreet help with washing, dressing and daily routines, at the pace that suits you.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=2000&q=85",
-    alt: "A healthcare professional sitting and talking with a client in a supported living setting",
+    image: hero4.url,
+    alt: "A South Asian support worker holding hands with an elderly Caribbean woman in supported living",
     eyebrow: "Companionship and community care",
     title: "Nobody Should Face the Day Alone",
     desc: "Conversation, outings and reassurance from carers who genuinely care.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=2000&q=85",
-    alt: "Care professionals from diverse backgrounds supporting residents in a care home",
+    image: hero5.url,
+    alt: "A care home support worker serving tea to a group of diverse elderly residents",
     eyebrow: "Based in Wales",
     title: "Skilled, Kind and Fully Vetted",
     desc: "Based in Wales, expanding to serve communities across the UK soon.",
