@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Button } from "@/components/ui/button";
-const aboutImg = "https://images.unsplash.com/photo-1595475207225-428b62bda831?auto=format&fit=crop&w=1200&q=85";
+const aboutImg = "/__l5e/assets-v1/86bbbd56-d14f-4ae8-a38d-b1d5dd5279f1/hero-2.jpg";
 
 export const Route = createFileRoute("/about")({
   component: About,

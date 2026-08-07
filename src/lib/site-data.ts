@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
     short:
       "Our core care-at-home service, covering elderly care, personal care, live-in, respite and palliative support. Registration in progress, launching soon.",
     image:
-      "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/86bbbd56-d14f-4ae8-a38d-b1d5dd5279f1/hero-2.jpg",
     description:
       "Domiciliary Care is our primary care-at-home service, bringing professional support directly into the home from short daily visits to several calls a day. It combines discreet personal care with attentive, unhurried support that helps people stay safe, well and independent in familiar surroundings. Elderly care, personal care, live-in care, respite care and palliative care all sit within this service. Our registration is currently in progress and Domiciliary Care will launch soon.",
     who: [
@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
     short:
       "Specialist, patient support for people living with dementia and their families.",
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/1a8b5e92-5344-43e0-8654-45afbc1e81ca/hero-4.jpg",
     description:
       "Living with dementia can feel unsettling for everyone involved. Our trained carers use gentle, person centred techniques to reduce anxiety, encourage familiar routines and support memory in everyday moments.",
     who: [
@@ -108,7 +108,7 @@ export const SERVICES: Service[] = [
     short:
       "Practical help around the home so daily life stays calm and manageable.",
     image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/88c5b66c-daef-420c-a3cc-6c3ade01957d/hero-5.jpg",
     description:
       "A tidy, well run home makes a real difference to wellbeing. Our carers handle everyday chores with care and attention, keeping the household running smoothly.",
     who: [
@@ -135,7 +135,7 @@ export const SERVICES: Service[] = [
     short:
       "Warm, friendly company that keeps loneliness at bay and life full of small joys.",
     image:
-      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/766d28f8-2980-4f3b-81f5-adeaf26d0e7f/hero-3.jpg",
     description:
       "Companionship visits are about connection. Whether it is a cup of tea and a chat, a walk in the park or an outing to a favourite place, our carers bring warmth and consistency to each visit.",
     who: [
@@ -162,7 +162,7 @@ export const SERVICES: Service[] = [
     short:
       "Temporary and permanent health and social care staff for hospitals, care homes, schools, prisons and supported living.",
     image:
-      "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/87c6dc38-01c7-44e1-85a5-87abdb79c049/hero-1.jpg",
     description:
       "We supply reliable, fully vetted health and social care professionals to organisations that cannot afford gaps in cover. Every candidate is interviewed, referenced and DBS checked before placement, and our team is contactable 24 hours a day for urgent shift requests.",
     who: [
@@ -198,7 +198,7 @@ export const SUB_SERVICES: Service[] = [
     short:
       "Attentive daily support for older adults who want to stay safe, well and independent at home.",
     image:
-      "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/766d28f8-2980-4f3b-81f5-adeaf26d0e7f/hero-3.jpg",
     description:
       "Elderly care is planned around routines, preferences, culture and family relationships so support feels natural rather than clinical. Visits can be short daily calls or several calls a day.",
     who: [
@@ -227,7 +227,7 @@ export const SUB_SERVICES: Service[] = [
     short:
       "Discreet, respectful help with washing, dressing and continence, always delivered with dignity.",
     image:
-      "https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/88c5b66c-daef-420c-a3cc-6c3ade01957d/hero-5.jpg",
     description:
       "Personal care is the most intimate support we provide, so it is always delivered by a carer the person knows and trusts, at a pace that feels comfortable.",
     who: [
@@ -256,7 +256,7 @@ export const SUB_SERVICES: Service[] = [
     short:
       "A trusted carer living in the home to provide round the clock support and companionship.",
     image:
-      "https://images.unsplash.com/photo-1543333995-a78aea2eee50?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/86bbbd56-d14f-4ae8-a38d-b1d5dd5279f1/hero-2.jpg",
     description:
       "Live-in care offers a warm alternative to residential care. A dedicated carer moves into the home, becoming a familiar and steadying presence that shapes each day around the person they support.",
     who: [
@@ -285,7 +285,7 @@ export const SUB_SERVICES: Service[] = [
     short:
       "Short term cover that gives family carers a genuine break, without disrupting routines.",
     image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/1a8b5e92-5344-43e0-8654-45afbc1e81ca/hero-4.jpg",
     description:
       "Respite care picks up an existing care plan exactly where the family leaves off, from a few hours a week to full 24 hour cover for a holiday or recovery period.",
     who: [
@@ -313,7 +313,7 @@ export const SUB_SERVICES: Service[] = [
     short:
       "Compassionate comfort focused support at home, working alongside clinical and hospice teams.",
     image:
-      "https://images.unsplash.com/photo-1470116945706-e6bf5d5a53ca?auto=format&fit=crop&w=1400&q=85",
+      "/__l5e/assets-v1/87c6dc38-01c7-44e1-85a5-87abdb79c049/hero-1.jpg",
     description:
       "Palliative care focuses on comfort, dignity and calm. We work closely with district nurses, GPs and hospice teams so the person and their family are fully supported at home.",
     who: [

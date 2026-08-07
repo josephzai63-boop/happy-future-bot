@@ -18,9 +18,9 @@ import { Button } from "@/components/ui/button";
 import { SERVICES, SECTORS, CONTACT, SUB_SERVICES, COVERAGE_STATEMENT } from "@/lib/site-data";
 
 const aboutImg =
-  "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1400&q=85";
+  "/__l5e/assets-v1/1a8b5e92-5344-43e0-8654-45afbc1e81ca/hero-4.jpg";
 const staffingImg =
-  "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1400&q=85";
+  "/__l5e/assets-v1/88c5b66c-daef-420c-a3cc-6c3ade01957d/hero-5.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
