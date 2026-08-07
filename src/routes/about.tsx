@@ -2,14 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Button } from "@/components/ui/button";
-const aboutImg = "https://images.unsplash.com/photo-1595475207225-428b62bda831?auto=format&fit=crop&w=1200&q=85";
+const aboutImg = "/__l5e/assets-v1/86bbbd56-d14f-4ae8-a38d-b1d5dd5279f1/hero-2.jpg";
 
 export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
       { title: "About — Excellent Future Care" },
-      { name: "description", content: "Meet the team behind Excellent Future Care — experienced professionals delivering compassionate, person-centred care across the UK." },
+      { name: "description", content: "Meet the team behind Excellent Future Care — experienced professionals delivering compassionate, person-centred care. Based in Wales, expanding to serve communities across the UK soon." },
       { property: "og:title", content: "About Excellent Future Care" },
       { property: "og:description", content: "Experienced professionals delivering compassionate, person-centred care." },
       { property: "og:url", content: "https://excellentfutureltd.com/about" },

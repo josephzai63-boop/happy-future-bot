@@ -4,7 +4,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
-import { SERVICES } from "@/lib/site-data";
+import { SERVICES, SUB_SERVICES, COVERAGE_STATEMENT, COMING_SOON_MESSAGE } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services/")({
   component: ServicesIndex,
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/services/")({
       { title: "Our Care Services | Excellent Future Healthcare" },
       { name: "description", content: "Domiciliary, dementia, live-in, companionship and domestic support care from Excellent Future Healthcare. Palliative and respite care coming soon." },
       { property: "og:title", content: "Our Care Services | Excellent Future Healthcare" },
-      { property: "og:description", content: "Domiciliary, dementia, live-in, companionship and domestic support care across the UK." },
+      { property: "og:description", content: "Domiciliary, dementia, companionship and domestic support care. Based in Wales, expanding to serve communities across the UK soon." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://excellentfutureltd.com/services" },
     ],
@@ -35,7 +35,7 @@ function ServicesIndex() {
               Care shaped around the person
             </h1>
             <p className="ef-hero-text mt-4 max-w-2xl text-primary-foreground/85" style={{ animationDelay: "240ms" }}>
-              Every plan of care starts with a conversation. Choose a service to learn more about how we can help.
+              Every plan of care starts with a conversation. Choose a service to learn more about how we can help. {COVERAGE_STATEMENT}
             </p>
           </div>
         </section>
@@ -73,7 +73,37 @@ function ServicesIndex() {
             ))}
           </div>
 
-          <Reveal className="mt-16 rounded-2xl border border-border bg-muted/40 p-10 text-center">
+          <Reveal className="mt-16 rounded-2xl border border-gold/35 bg-gold/8 p-8 md:p-10">
+            <div className="flex flex-wrap items-center gap-3">
+              <h2 className="font-display text-2xl text-primary">Within Domiciliary Care</h2>
+              <span className="rounded-full bg-gold px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold-foreground">
+                Coming Soon
+              </span>
+            </div>
+            <p className="mt-3 max-w-3xl text-sm text-muted-foreground">{COMING_SOON_MESSAGE}</p>
+            <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+              The following are sub-services of Domiciliary Care and will become available when Domiciliary Care launches.
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {SUB_SERVICES.map((sub, i) => (
+                <Reveal key={sub.slug} delay={i * 70} className="h-full">
+                  <Link
+                    to="/services/$slug"
+                    params={{ slug: sub.slug }}
+                    className="ef-card flex h-full flex-col rounded-xl border border-border bg-card p-5 shadow-[var(--shadow-card)]"
+                  >
+                    <span className="font-display text-lg text-primary">{sub.title}</span>
+                    <span className="mt-2 flex-1 text-sm text-muted-foreground">{sub.short}</span>
+                    <span className="mt-4 text-xs font-semibold uppercase tracking-wide text-gold">
+                      Available when Domiciliary Care launches
+                    </span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal className="mt-10 rounded-2xl border border-border bg-muted/40 p-10 text-center">
             <h2 className="font-display text-2xl text-primary">Not sure which service you need?</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
               Book a free consultation and one of our care coordinators will help you shape the right plan.

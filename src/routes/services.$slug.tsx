@@ -4,7 +4,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
-import { CONTACT, COMING_SOON_MESSAGE, getService, SERVICES } from "@/lib/site-data";
+import { CONTACT, COMING_SOON_MESSAGE, SUB_SERVICE_NOTICE, getService, getSubServices, SERVICES } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
@@ -50,6 +50,7 @@ export const Route = createFileRoute("/services/$slug")({
 function ServiceDetail() {
   const service = Route.useLoaderData();
   const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const subs = getSubServices(service.slug);
 
   return (
     <div className="min-h-screen bg-background">
@@ -100,7 +101,18 @@ function ServiceDetail() {
               {service.comingSoon && (
                 <Reveal className="mb-8 rounded-2xl border border-gold/40 bg-gold/10 p-6">
                   <div className="font-display text-lg text-primary">Coming Soon</div>
-                  <p className="mt-2 text-sm text-muted-foreground">{COMING_SOON_MESSAGE}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {service.parent ? SUB_SERVICE_NOTICE : COMING_SOON_MESSAGE}
+                  </p>
+                  {service.parent && (
+                    <Link
+                      to="/services/$slug"
+                      params={{ slug: service.parent }}
+                      className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                    >
+                      Part of Domiciliary Care <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  )}
                   <Button asChild className="mt-5 bg-primary text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90">
                     <Link to="/contact">Register your interest</Link>
                   </Button>
@@ -148,6 +160,30 @@ function ServiceDetail() {
                   </ul>
                 </div>
               </Reveal>
+
+              {subs.length > 0 && (
+                <Reveal delay={140} className="mt-6">
+                  <div className="rounded-2xl border border-gold/35 bg-gold/8 p-6">
+                    <h3 className="font-display text-xl text-primary">Sub-services within Domiciliary Care</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Each of these will become available when Domiciliary Care launches.
+                    </p>
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                      {subs.map((sub) => (
+                        <Link
+                          key={sub.slug}
+                          to="/services/$slug"
+                          params={{ slug: sub.slug }}
+                          className="ef-card rounded-xl border border-border bg-card p-4 shadow-[var(--shadow-card)]"
+                        >
+                          <span className="font-display text-base text-primary">{sub.title}</span>
+                          <span className="mt-1 block text-xs text-muted-foreground">{sub.short}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              )}
 
               <Reveal delay={160} className="mt-6">
                 <div className="rounded-2xl border border-border bg-muted/40 p-6">

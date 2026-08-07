@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/excellent-future-healthcare-logo.jpg.asset.json";
+import logo from "@/assets/excellent-future-logo-2026.jpg.asset.json";
 import { CONTACT } from "@/lib/site-data";
 
 const nav = [
@@ -19,7 +19,7 @@ export function Header() {
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 text-xs">
           <span className="hidden sm:inline">Available {CONTACT.hours} / 24hrs</span>
-          <span className="sm:hidden">Compassionate care across the UK</span>
+          <span className="sm:hidden">Based in Wales, expanding across the UK soon</span>
           <div className="flex items-center gap-4">
             <a href={`mailto:${CONTACT.emailGeneral}`} className="hidden items-center gap-1.5 md:flex">
               <Mail className="h-3.5 w-3.5" /> {CONTACT.emailGeneral}

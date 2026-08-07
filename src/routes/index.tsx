@@ -15,12 +15,12 @@ import { HeroSlider } from "@/components/site/HeroSlider";
 import { AppointmentSection } from "@/components/site/AppointmentSection";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
-import { SERVICES, SECTORS, CONTACT } from "@/lib/site-data";
+import { SERVICES, SECTORS, CONTACT, SUB_SERVICES, COVERAGE_STATEMENT } from "@/lib/site-data";
 
 const aboutImg =
-  "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1400&q=85";
+  "/__l5e/assets-v1/1a8b5e92-5344-43e0-8654-45afbc1e81ca/hero-4.jpg";
 const staffingImg =
-  "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1400&q=85";
+  "/__l5e/assets-v1/88c5b66c-daef-420c-a3cc-6c3ade01957d/hero-5.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -29,12 +29,12 @@ export const Route = createFileRoute("/")({
       { title: "Excellent Future Healthcare | Care & Staffing Services UK" },
       { name: "description", content: "Excellent Future Limited, trading as Excellent Future Healthcare, supplies temporary and permanent health and social care staff and delivers domiciliary, dementia and live-in care. Call 07412754646." },
       { property: "og:title", content: "Excellent Future Healthcare | Care & Staffing Services UK" },
-      { property: "og:description", content: "Compassionate care at home and reliable health and social care staffing across the UK. Available 24 hours." },
+      { property: "og:description", content: "Compassionate care at home and reliable health and social care staffing. Based in Wales, expanding to serve communities across the UK soon. Available 24 hours." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://excellentfutureltd.com/" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Excellent Future Healthcare | Care & Staffing Services UK" },
-      { name: "twitter:description", content: "Compassionate care at home and reliable health and social care staffing across the UK." },
+      { name: "twitter:description", content: "Compassionate care at home and reliable health and social care staffing. Based in Wales, expanding to serve communities across the UK soon." },
       { name: "robots", content: "index, follow, max-image-preview:large" },
     ],
     links: [{ rel: "canonical", href: "https://excellentfutureltd.com/" }],
@@ -59,7 +59,7 @@ const trustStats = [
   { value: "24hrs", label: "Availability, every day of the year" },
   { value: "10+", label: "Years of combined nursing experience" },
   { value: "100%", label: "DBS checked and referenced staff" },
-  { value: "UK", label: "Wide coverage across the country" },
+  { value: "Wales", label: "Based in Wales, expanding across the UK soon" },
 ];
 
 const reasons = [
@@ -87,7 +87,7 @@ const steps: { title: string; desc: string }[] = [
 const faqs: { q: string; a: string }[] = [
   {
     q: "What areas do you cover?",
-    a: "We support clients and partner organisations across the United Kingdom. Call us and we will confirm availability in your area straight away.",
+    a: "Based in Wales, expanding to serve communities across the UK soon. Call us and we will confirm availability in your area straight away.",
   },
   {
     q: "How quickly can care start?",
@@ -171,7 +171,7 @@ function Index() {
               <span className="text-sm font-semibold uppercase tracking-[0.18em] text-purple">Our Services</span>
               <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">Care shaped around the person</h2>
               <p className="mt-4 text-muted-foreground">
-                Reliable, regulated care delivered with warmth across every service we offer.
+                Reliable, regulated care delivered with warmth across every service we offer. {COVERAGE_STATEMENT}
               </p>
             </Reveal>
             <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -205,6 +205,34 @@ function Index() {
                 </Reveal>
               ))}
             </div>
+
+            {/* Sub-services of Domiciliary Care */}
+            <Reveal className="mt-14 rounded-2xl border border-gold/35 bg-gold/8 p-8">
+              <div className="flex flex-wrap items-center gap-3">
+                <h3 className="font-display text-xl text-primary">Included within Domiciliary Care</h3>
+                <span className="rounded-full bg-gold px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold-foreground">
+                  Coming Soon
+                </span>
+              </div>
+              <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
+                Registration for our Domiciliary Care service is currently in progress. The support below sits within
+                Domiciliary Care and will become available when the service launches.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                {SUB_SERVICES.map((sub, i) => (
+                  <Reveal key={sub.slug} delay={i * 70}>
+                    <Link
+                      to="/services/$slug"
+                      params={{ slug: sub.slug }}
+                      className="ef-card block h-full rounded-xl border border-border bg-card p-4 shadow-[var(--shadow-card)]"
+                    >
+                      <span className="font-display text-base text-primary">{sub.title}</span>
+                      <span className="mt-1 block text-xs text-muted-foreground">Available at launch</span>
+                    </Link>
+                  </Reveal>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 

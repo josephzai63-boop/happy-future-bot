@@ -65,26 +65,26 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.05 265);
 
-  /* Navy from logo */
-  --primary: oklch(0.28 0.11 265);
-  --primary-foreground: oklch(0.99 0.005 260);
-  --primary-glow: oklch(0.42 0.14 262);
+  /* Deep navy blue from logo wordmark */
+  --primary: oklch(0.36 0.115 257);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --primary-glow: oklch(0.56 0.135 250);
 
-  /* Gold from logo */
-  --gold: oklch(0.74 0.12 80);
-  --gold-foreground: oklch(0.2 0.05 265);
+  /* Logo green — used as the accent / CTA colour */
+  --gold: oklch(0.62 0.155 148);
+  --gold-foreground: oklch(0.99 0.005 250);
 
-  /* Purple from logo */
-  --purple: oklch(0.38 0.14 320);
-  --purple-foreground: oklch(0.99 0.005 260);
+  /* Logo mid blue */
+  --purple: oklch(0.55 0.14 250);
+  --purple-foreground: oklch(0.99 0.005 250);
 
-  --secondary: oklch(0.74 0.12 80);
-  --secondary-foreground: oklch(0.2 0.05 265);
+  --secondary: oklch(0.62 0.155 148);
+  --secondary-foreground: oklch(0.99 0.005 250);
 
-  --muted: oklch(0.97 0.008 260);
-  --muted-foreground: oklch(0.45 0.03 265);
-  --accent: oklch(0.94 0.03 320);
-  --accent-foreground: oklch(0.28 0.11 265);
+  --muted: oklch(0.97 0.01 240);
+  --muted-foreground: oklch(0.47 0.028 255);
+  --accent: oklch(0.94 0.035 160);
+  --accent-foreground: oklch(0.36 0.115 257);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0.005 260);
   --border: oklch(0.9 0.015 260);
