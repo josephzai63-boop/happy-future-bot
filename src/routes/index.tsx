@@ -12,6 +12,7 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { HeroSlider } from "@/components/site/HeroSlider";
+import { PromoVideoSection } from "@/components/site/PromoVideoSection";
 import { AppointmentSection } from "@/components/site/AppointmentSection";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
@@ -109,6 +110,10 @@ function Index() {
       <Header />
       <main>
         <HeroSlider />
+
+        {/* Promotional video + contact details */}
+        <PromoVideoSection />
+
 
         {/* Trust indicators */}
         <section className="border-b border-border bg-primary text-primary-foreground">

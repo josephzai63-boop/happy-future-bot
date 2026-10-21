@@ -1,0 +1,16 @@
+CREATE TABLE public.contact_submissions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT,
+  subject TEXT NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+GRANT ALL ON public.contact_submissions TO service_role;
+
+ALTER TABLE public.contact_submissions ENABLE ROW LEVEL SECURITY;
+-- No anon/authenticated policies: submissions are written and read only by
+-- server-side code holding the service role, so visitors can never list,
+-- alter or delete other people's enquiries.

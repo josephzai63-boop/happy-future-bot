@@ -5,6 +5,10 @@ export const CONTACT = {
   emailAppointments: "julie@excellentfutureltd.com",
   location: "Wales, United Kingdom",
   hours: "24 Hours",
+  phoneDisplay: "07412 754646",
+  emailInfo: "info@excellentfutureltd.com",
+  websiteUrl: "https://excellentfutureltd.com",
+  websiteDisplay: "excellentfutureltd.com",
 };
 
 /** Consistent coverage wording used across the whole website. */
