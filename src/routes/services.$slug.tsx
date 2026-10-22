@@ -27,7 +27,7 @@ export const Route = createFileRoute("/services/$slug")({
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="text-center">
         <h1 className="font-display text-3xl">Something went wrong</h1>
-        <p className="mt-2 text-sm text-muted-foreground">{error.message}</p>
+        <p className="mt-2 text-sm text-muted-foreground">{error instanceof Error ? error.message : "Something went wrong"}</p>
         <Button asChild className="mt-6"><Link to="/services">Back to services</Link></Button>
       </div>
     </div>
