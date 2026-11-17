@@ -21,7 +21,9 @@ export type Database = {
           id: string
           message: string
           name: string
+          notification_sent_at: string | null
           phone: string | null
+          request_id: string | null
           subject: string
         }
         Insert: {
@@ -30,7 +32,9 @@ export type Database = {
           id?: string
           message: string
           name: string
+          notification_sent_at?: string | null
           phone?: string | null
+          request_id?: string | null
           subject: string
         }
         Update: {
@@ -39,7 +43,9 @@ export type Database = {
           id?: string
           message?: string
           name?: string
+          notification_sent_at?: string | null
           phone?: string | null
+          request_id?: string | null
           subject?: string
         }
         Relationships: []
