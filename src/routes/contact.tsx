@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Button } from "@/components/ui/button";
@@ -40,8 +40,14 @@ function Contact() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", subject: "", message: "", website: "" });
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const requestId = useRef<string | null>(null);
 
   function update(field: keyof typeof form, value: string) {
+    if (status === "error") {
+      requestId.current = null;
+      setStatus("idle");
+      setErrorMessage("");
+    }
     setForm((prev) => ({ ...prev, [field]: value }));
   }
 
@@ -50,12 +56,21 @@ function Contact() {
     if (status === "submitting") return;
     setStatus("submitting");
     setErrorMessage("");
+    requestId.current ??= crypto.randomUUID();
+
+    const hostname = window.location.hostname;
+    const isLovableOrLocalHost =
+      hostname.endsWith(".lovable.app") || hostname === "localhost" || hostname === "127.0.0.1";
+    const contactEndpoint = isLovableOrLocalHost
+      ? `${window.location.origin}/api/public/contact`
+      : "https://happy-future-bot.lovable.app/api/public/contact";
 
     try {
-      const res = await fetch("/api/public/contact", {
+      const res = await fetch(contactEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          requestId: requestId.current,
           name: form.name,
           email: form.email,
           phone: form.phone,
@@ -85,6 +100,7 @@ function Contact() {
 
   function resetForm() {
     setForm({ name: "", phone: "", email: "", subject: "", message: "", website: "" });
+    requestId.current = null;
     setStatus("idle");
     setErrorMessage("");
   }

@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+Keep public pages statically prerendered for shared hosting while contact submissions use the Lovable backend, because static hosting cannot safely hold email credentials or write enquiries.

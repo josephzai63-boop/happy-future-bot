@@ -88,8 +88,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Excellent Future Healthcare | Care & Staffing Services UK" },
       { property: "og:description", content: "Excellent Future Limited, trading as Excellent Future Healthcare. Domiciliary, dementia and live-in care, plus temporary and permanent health and social care staffing. Based in Wales, expanding to serve communities across the UK soon." },
       { name: "twitter:description", content: "Excellent Future Limited, trading as Excellent Future Healthcare. Domiciliary, dementia and live-in care, plus temporary and permanent health and social care staffing. Based in Wales, expanding to serve communities across the UK soon." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/509336cb-769d-417f-95fd-76c9be7a01ec/id-preview-f5313c1a--02c8db56-d376-4048-96c8-53d864105bb7.lovable.app-1784813313055.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/509336cb-769d-417f-95fd-76c9be7a01ec/id-preview-f5313c1a--02c8db56-d376-4048-96c8-53d864105bb7.lovable.app-1784813313055.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

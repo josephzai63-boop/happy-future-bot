@@ -11,5 +11,23 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Host Africa serves the prerendered public files; enumerate dynamic service pages explicitly.
+    pages: [
+      { path: "/" },
+      { path: "/about" },
+      { path: "/contact" },
+      { path: "/services" },
+      { path: "/services/domiciliary-care" },
+      { path: "/services/dementia-care" },
+      { path: "/services/domestic-support" },
+      { path: "/services/companionship" },
+      { path: "/services/staffing-solutions" },
+      { path: "/services/elderly-care" },
+      { path: "/services/personal-care" },
+      { path: "/services/live-in-care" },
+      { path: "/services/respite-care" },
+      { path: "/services/palliative-care" },
+    ],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
 });
